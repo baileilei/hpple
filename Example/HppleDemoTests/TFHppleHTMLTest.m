@@ -80,8 +80,12 @@
 
 - (void)testSearchesByNestedXPath
 {
-    NSArray *a = [self.doc searchWithXPathQuery:@"//div[@class='column']//strong"];
-    XCTAssertEqual([a count], 5);
+    NSArray *a = [self.doc searchWithXPathQuery:@"//div[@class='resblock-name']//a"];
+    XCTAssertEqual([a count], 11);
+    
+    [a enumerateObjectsUsingBlock:^(TFHppleElement * obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"%@",obj.content);
+    }];
     
     TFHppleElement * e = [a objectAtIndex:0];
     XCTAssertEqualObjects([e content], @"PeepCode");
