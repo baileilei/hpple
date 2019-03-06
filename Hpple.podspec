@@ -11,5 +11,4 @@ Pod::Spec.new do |s|
   s.ios.libraries = 'xml2'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   s.requires_arc = true
-  s.module_name = "Hpple"
 end
