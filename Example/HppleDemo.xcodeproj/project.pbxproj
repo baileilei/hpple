@@ -22,8 +22,6 @@
 		AD210D1F1A249D73007EB02E /* TFHppleHTMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D1B1A249D73007EB02E /* TFHppleHTMLTest.m */; };
 		AD210D201A249D73007EB02E /* TFHppleXMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D1C1A249D73007EB02E /* TFHppleXMLTest.m */; };
 		AD210D221A24A06D007EB02E /* TFHppleStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D211A24A06C007EB02E /* TFHppleStringTest.m */; };
-		FD4323B5222E81AA007801CE /* downloadData.html in Resources */ = {isa = PBXBuildFile; fileRef = FD4323B4222E81AA007801CE /* downloadData.html */; };
-		FD4323B6222E81AA007801CE /* downloadData.html in Resources */ = {isa = PBXBuildFile; fileRef = FD4323B4222E81AA007801CE /* downloadData.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +59,6 @@
 		AD210D1B1A249D73007EB02E /* TFHppleHTMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleHTMLTest.m; sourceTree = "<group>"; };
 		AD210D1C1A249D73007EB02E /* TFHppleXMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleXMLTest.m; sourceTree = "<group>"; };
 		AD210D211A24A06C007EB02E /* TFHppleStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleStringTest.m; sourceTree = "<group>"; };
-		FD4323B4222E81AA007801CE /* downloadData.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = downloadData.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +168,6 @@
 		AD210D181A249D73007EB02E /* TestData */ = {
 			isa = PBXGroup;
 			children = (
-				FD4323B4222E81AA007801CE /* downloadData.html */,
 				AD210D191A249D73007EB02E /* feed.rss */,
 				AD210D1A1A249D73007EB02E /* index.html */,
 			);
@@ -259,7 +255,6 @@
 			files = (
 				AD210CF11A249B34007EB02E /* Main.storyboard in Resources */,
 				AD210CF61A249B34007EB02E /* LaunchScreen.xib in Resources */,
-				FD4323B5222E81AA007801CE /* downloadData.html in Resources */,
 				AD210CF31A249B34007EB02E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4323B6222E81AA007801CE /* downloadData.html in Resources */,
 				AD210D1D1A249D73007EB02E /* feed.rss in Resources */,
 				AD210D1E1A249D73007EB02E /* index.html in Resources */,
 			);

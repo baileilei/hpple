@@ -34,8 +34,6 @@
 #define TEST_DOCUMENT_NAME          @"index"
 #define TEST_DOCUMENT_EXTENSION     @"html"
 
-#define TEST_Data @"downloadData"
-
 @interface TFHppleHTMLTest : XCTestCase
 
 @property (nonatomic, strong) TFHpple *doc;
@@ -47,7 +45,7 @@
 - (void)setUp
 {
     NSBundle *testBundle = [NSBundle bundleForClass:[self class]];
-    NSURL *testFileUrl = [testBundle URLForResource:TEST_Data withExtension:TEST_DOCUMENT_EXTENSION];
+    NSURL *testFileUrl = [testBundle URLForResource:TEST_DOCUMENT_NAME withExtension:TEST_DOCUMENT_EXTENSION];
     NSData * data = [NSData dataWithContentsOfURL:testFileUrl];
     self.doc = [[TFHpple alloc] initWithHTMLData:data];
 }
@@ -60,19 +58,17 @@
 
 //  doc.search("//p[@class='posted']")
 - (void)testSearchesWithXPath
-{//正则需要加强！！！
-    NSArray *a = [self.doc searchWithXPathQuery:@"//ul[@class='resblock-list-wrapper']"];
-//    XCTAssertEqual([a count], 2);
-    NSLog(@"%@",a);
+{
+    NSArray *a = [self.doc searchWithXPathQuery:@"//a[@class='sponsor']"];
+    XCTAssertEqual([a count], 2);
     
     TFHppleElement * e = [a objectAtIndex:0];
-    NSLog(@"%@",e);
     XCTAssertTrue([e isMemberOfClass:[TFHppleElement class]]);
 }
 
 - (void)testFindsFirstElementAtXPath
 {
-    TFHppleElement *e = [self.doc peekAtSearchWithXPathQuery:@"//ul[@class='resblock-list-wrapper']"];
+    TFHppleElement *e = [self.doc peekAtSearchWithXPathQuery:@"//a[@class='sponsor']"];
     
     XCTAssertEqualObjects([e content], @"RailsMachine");
     XCTAssertEqualObjects([e tagName], @"a");
